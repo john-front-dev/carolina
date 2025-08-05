@@ -1,9 +1,9 @@
-import { Button } from "@/shared/ui";
+import { Header } from "@/widgets/Header";
 
 export default function Home() {
   return (
     <div className="container mx-auto">
-      <Button>Header</Button>
+      <Header />
     </div>
   );
 }
