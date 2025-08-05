@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 type ButtonProps = {
   size?: "md" | "lg";
   children: ReactNode;
-  type: "button" | "text";
+  type?: "button" | "text";
 };
 
 export const Button = ({

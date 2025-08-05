@@ -1,16 +1,14 @@
 import { Carousel } from "@/features/carousel";
 import { Footer } from "@/widgets/Footer";
 import { Header } from "@/widgets/Header";
+import { Slider } from "@/widgets/Slider";
 
 export default function Home() {
   return (
     <div>
       <Header />
 
-      <div
-        id="header"
-        className="min-h-[40vh] bg-amber-500 flex flex-col items-center justify-center"
-      ></div>
+      <Slider />
       <div
         id="whyUs"
         className="min-h-[40vh] bg-amber-200 flex flex-col items-center justify-center"
