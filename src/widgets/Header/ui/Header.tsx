@@ -41,7 +41,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="flex justify-between items-center px-10 py-4 sticky top-0 bg-white z-50">
+    <div className="flex justify-between items-center px-10 py-4 container mx-auto">
       <Image src={logo} alt="logo" width={137} height={104} priority={true} />
       <ul className="flex gap-4">
         {links.map((link) => (

@@ -3,9 +3,23 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary: #7d7d7d;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
   --breakpoint-*: initial;
   --breakpoint-desktop: 1440px;
+}
+
+.carousel-track {
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

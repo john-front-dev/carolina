@@ -1,9 +1,35 @@
+import { Carousel } from "@/features/carousel";
+import { Footer } from "@/widgets/Footer";
 import { Header } from "@/widgets/Header";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
       <Header />
+
+      <div
+        id="header"
+        className="min-h-[40vh] bg-amber-500 flex flex-col items-center justify-center"
+      ></div>
+      <div
+        id="whyUs"
+        className="min-h-[40vh] bg-amber-200 flex flex-col items-center justify-center"
+      ></div>
+      <div
+        id="aboutUs"
+        className="min-h-[40vh] bg-amber-100 flex flex-col items-center justify-center"
+      ></div>
+      <div
+        id="brands"
+        className="min-h-[40vh] flex flex-col items-center justify-center"
+      >
+        <Carousel />
+      </div>
+      <div
+        id="contacts"
+        className="min-h-[40vh] bg-amber-900 flex flex-col items-center justify-center"
+      ></div>
+      <Footer />
     </div>
   );
 }
