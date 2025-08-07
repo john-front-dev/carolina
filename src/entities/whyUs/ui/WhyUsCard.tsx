@@ -15,7 +15,7 @@ export const WhyUsCard = ({
 }: WhyUsCardProps) => {
   return (
     <div
-      className={`flex flex-col justify-between p-6 rounded-3xl w-[405px] h-[221px] bg-[#F7F7F7]${
+      className={`flex flex-col justify-between p-6 rounded-3xl w-[405px] h-[221px] bg-[#F7F7F7] ${
         className ? ` ${className}` : ""
       }`}
     >
