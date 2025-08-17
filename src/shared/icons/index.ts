@@ -7,3 +7,4 @@ export * from "./Email";
 export * from "./Telegram";
 export * from "./WhatsApp";
 export * from "./Instagram";
+export * from "./Burger";

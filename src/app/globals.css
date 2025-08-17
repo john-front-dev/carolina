@@ -4,8 +4,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-secondary: #7d7d7d;
-  --color-gray: #F7F7F7
+  --color-gray: #F7F7F7;
   --breakpoint-*: initial;
+  --breakpoint-laptop: 1024px;
   --breakpoint-desktop: 1440px;
 }
 

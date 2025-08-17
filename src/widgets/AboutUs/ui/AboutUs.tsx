@@ -3,11 +3,11 @@ import Img from "../assets/AboutUsImg.png";
 
 export const AboutUs = () => {
   return (
-    <div className="container mx-auto mb-20">
+    <div className="container mx-auto mb-20 px-4 laptop:px-0">
       <h2 className="text-[24px] text-center">О Нас</h2>
-      <div className="flex justify-center items-center gap-6 mt-10">
+      <div className="flex flex-col laptop:flex-row justify-center items-center gap-6 mt-10">
         <Image width={592} height={474} src={Img} alt="img" />
-        <div className="w-[570px]">
+        <div className="laptop:w-[570px]">
           <h2 className="text-[32px] mb-3">О нас</h2>
           <p>
             Мы — надёжный дистрибьютор с головным офисом в Узбекистане,

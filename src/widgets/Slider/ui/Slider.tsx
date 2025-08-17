@@ -14,7 +14,7 @@ export const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const slideCount = slides.length;
-  const slideWidth = 500;
+  const [slideWidth, setSlideWidth] = useState(300);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -61,13 +61,28 @@ export const Slider = () => {
     setActiveIndex(index);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setSlideWidth(500);
+      } else {
+        setSlideWidth(300);
+      }
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="bg-[#f6eee6] py-[124px]">
-      <div className="container mx-auto flex flex-col items-center pl-[120px] pr-[97px]">
-        <div className="flex w-full justify-between items-center gap-12">
+    <div className="bg-[#f6eee6] py-20 laptop:py-[124px]">
+      <div className="container mx-auto flex flex-col items-center laptop:pl-[120px] laptop:pr-[97px]">
+        <div className="flex flex-col laptop:flex-row w-full justify-between items-center gap-12">
           <div>
-            <h2 className="text-2xl mb-2">Dragon Parfume</h2>
-            <h1 className="text-5xl font-bold mb-3">
+            <h2 className="laptop:text-2xl mb-2">Dragon Parfume</h2>
+            <h1 className="text-2xl laptop:text-5xl font-bold mb-3">
               Beauty Inspired <br /> by Real Life
             </h1>
             <p className="mb-8 text-gray-500">
@@ -80,7 +95,7 @@ export const Slider = () => {
           </div>
 
           <div
-            className="overflow-hidden max-w-[500px] h-[500px] relative"
+            className="overflow-hidden laptop:max-w-[500px] laptop:h-[500px] relative"
             style={{ width: slideWidth }}
           >
             <div
@@ -108,18 +123,6 @@ export const Slider = () => {
                   />
                 </div>
               ))}
-
-              <div style={{ minWidth: slideWidth }}>
-                <Image
-                  src={slides[0].img}
-                  alt="Slide duplicate"
-                  width={slideWidth}
-                  height={slideWidth}
-                  className="object-contain"
-                  draggable={false}
-                  priority
-                />
-              </div>
             </div>
           </div>
         </div>
